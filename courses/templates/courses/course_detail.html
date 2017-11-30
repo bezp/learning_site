@@ -1,22 +1,26 @@
-{% extends "layout.html" %}
+{% extends "courses/layout.html" %}
+{% load course_extras %}
 
 {% block title %}{{ course.title }}{% endblock %}
 
 {% block content %}
-<article>
-    <h2>{{ course.title }}</h2>
-    {{ course.description }}
+    <div class="row columns">
+        {{ block.super }}
+        <article>
+            <h1 class="">{{ course.title }}</h1>
 
-    <section>
-        {% for step in course.step_set.all %}
-        <h3>
-            <a href="{% url 'courses:step' course_pk=step.course.pk step_pk=step.order %}">{{ step.title }}</a>
-        </h3>
-            {{ step.description }}
-        {% endfor %}
-    </section>
-</article>
+            <div class="callout secondary">
+                {{ course.description|markdown_to_html }}
+            </div>
+
+            <dl>
+                {% for step in steps %}
+                    <dt>
+                        <a href="{{ step.get_absolute_url }}">{{ step.title }}</a>
+                    </dt>
+                    <dd>{{ step.description|markdown_to_html }}</dd>
+                {% endfor %}
+            </dl>
+        </article>
+    </div>
 {% endblock %}
-
-
-

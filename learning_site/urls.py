@@ -23,7 +23,8 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 urlpatterns = [
     url(r'^courses/', include('courses.urls', namespace='courses')),
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.hello_world, name='trying'),
+    url(r'^suggest/$', views.suggestion_view, name='suggestion'),
+    url(r'^$', views.hello_world, name='home'),
     url(r'^admissions/', views.html_page, name='admissions'),
     #url(r'^esite/', include('admissions.urls', namespace='admissions')),
 ]
