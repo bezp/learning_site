@@ -16,12 +16,12 @@ def suggestion_view(request):
         form = forms.SuggestionForm(request.POST)
         if form.is_valid():
             send_mail(
-                'Suggestion from {}'.format(form.cleaned_data['name']),
-                form.cleaned_data['suggestion'],
-                '{name} <{email}>'.format(**form.cleaned_data),
-                ['kenneth@teamtreehouse.com']
+                'Suggestion from {}'.format(form.cleaned_data['name']),#subject line
+                form.cleaned_data['suggestion'], #body of email
+                '{name} <{email}>'.format(**form.cleaned_data), #email its from (will use dict keys to fill out the 'name/email'
+                ['bezalelpan@yahoo.com'] #where it sends mail
             )
-            messages.add_message(request, messages.SUCCESS,
+            messages.add_message(request, messages.SUCCESS, #able to put in flash messages
                                  'Thanks for your suggestion!')
             return HttpResponseRedirect(reverse('suggestion'))
     return render(request, 'suggestion_form.html', {'form': form})

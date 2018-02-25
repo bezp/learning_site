@@ -10,7 +10,7 @@ def must_be_empty(value):
 class SuggestionForm(forms.Form):
     name = forms.CharField()
     email = forms.EmailField()
-    verify_email = forms.EmailField(label="Please verify your email address")
+    verify_email = forms.EmailField(label="Please verify your email address", help_text='help txt')
     suggestion = forms.CharField(widget=forms.Textarea)
     honeypot = forms.CharField(required=False,
                                widget=forms.HiddenInput,
@@ -18,7 +18,7 @@ class SuggestionForm(forms.Form):
                                validators=[must_be_empty]
                                )
 
-    def clean(self):
+    def clean(self): #b/c this is just 'clean' not  clean_x (name,email,verify_email, etc) it will clean the whole form, not the invidual fields
         cleaned_data = super().clean()
         email = cleaned_data.get('email')
         verify = cleaned_data.get('verify_email')
