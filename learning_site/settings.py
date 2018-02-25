@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'courses', #added b/c we made a new 'courses' app
     'admissions',
+    'jobs',
+
 ]
 
 MIDDLEWARE = [

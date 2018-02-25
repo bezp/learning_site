@@ -27,6 +27,10 @@ urlpatterns = [
     url(r'^$', views.hello_world, name='home'),
     url(r'^admissions/', views.html_page, name='admissions'),
     #url(r'^esite/', include('admissions.urls', namespace='admissions')),
+
+
+    url(r'^jobs/', include('jobs.urls', namespace='jobs')),
+
 ]
 
 urlpatterns += staticfiles_urlpatterns()
