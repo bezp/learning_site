@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+
+
+
+
+
+</head>
+<body>
+
+            <form method="post">    <!--<p class="p-name">(name)</p>-->
+                {{ form.as_p }}
+                {% csrf_token %}    <!--<p class="p-message">(nssame)</p>-->
+                <input type="submit">
+            </form>
+
+
+
+
+
+
+
+</body>
+</html>
