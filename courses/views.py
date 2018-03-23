@@ -28,3 +28,7 @@ def text_detail(request, course_pk, step_pk):
 def quiz_detail(request, course_pk, step_pk):
     step = get_object_or_404(models.Quiz, course_id=course_pk, pk=step_pk)
     return render(request, 'courses/quiz_detail.html', {'step': step})
+
+
+def js_example(request):
+    return render(request, 'courses/js_example.html')

@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'courses/js_example.css' %}" />
+
+</head>
+<body>
+
+    <h1 id="our-headline">click an item to replace this text.</h1>
+    <button id="our-button">Add new item</button>
+
+    <ul id="our-list">
+        <li>item numbero  1</li>
+        <li>item numbero  2</li>
+        <li>item numbero  3</li>
+        <li>item numbero  4</li>
+        <li>item numbero  5</li>
+
+    </ul>
+
+
+    <script type="text/javascript" src="{% static 'courses/js_example.js' %}"></script>
+    <!-- its not in the head b/c we dont hav doc.ready func?? and it needs to see the li items -->
+</body>
+</html>
