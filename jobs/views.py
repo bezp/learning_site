@@ -1,14 +1,26 @@
-from django.shortcuts import render
-from . import forms
-# Create your views here.
+
+
 from django.http import HttpResponse
 from django.core.urlresolvers import reverse
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
-from . import forms, udemyOOP
-from xml.dom import minidom
-from collections import namedtuple
-import requests
+from . import forms, udemyOOP, models
+from django.views.generic import View, TemplateView, ListView, DetailView
+
+
+class SpeechHomeView(TemplateView):
+    template_name = 'jobs/speechHome.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["another_key"] = 'value to giv to the template'
+        return context
+
+class HelloWorldView(View):
+
+    def get(self, request):
+        return HttpResponse('string')
+
 
 def speech(request):
     form = forms.NoteForm()
@@ -17,9 +29,25 @@ def speech(request):
         if form.is_valid():
             form.save()
             return HttpResponseRedirect(reverse('jobs:speech'))
-
-
     return render(request, 'jobs/speech.html', {'form': form})
+
+
+# def patient_list(request):
+#     patients = models.Patient.objects.all()
+#     return render(request, 'jobs/patient_list.html',  {'patients': patients})
+class PatientListView(ListView):
+    context_object_name = "patients"
+    model = models.Patient
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["another_key"] = 'value to giv to the template'
+        return context
+
+class PatientDetailView(DetailView):
+    model = models.Patient
+
+
 
 class Car:
     def __init__(self):
