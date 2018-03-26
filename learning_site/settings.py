@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'courses', #added b/c we made a new 'courses' app
     'admissions',
     'jobs',
+    'uiux',
 
 ]
 
