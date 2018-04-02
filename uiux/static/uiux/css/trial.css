@@ -29,6 +29,78 @@
 
 
 
+/* carousel */
+.carousel .carousel-inner .item img {
+    margin: 0 auto;
+}
+/* inner box shadow for the chevrons */
+.carousel .carousel-control {
+    background-image: none;
+}
+.item img {
+    width: 100%;
+    max-height: 60rem;
+}
+.carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+    text-transform: uppercase;
+}
+.btn {
+    font-size: 18px;
+    color: #FFF;
+    padding: 12px 22px;
+    background: #5E4485; /* purple */
+    border: 2px solid #FFF;
+}
+.btn:hover {
+    background-color: #5E4485;
+    color: #FFF;
+}
+
+@media (max-width:600px) {
+    .carousel-caption {
+        display: none;
+    }
+    #icon {
+        max-width: 150px;
+    }
+    h2 {
+        font-size: 1.9em;
+    }
+}
+#icon {
+    max-width: 200px;
+    margin: 1% auto;
+}
+.container {
+    margin: 4% auto;
+}
+footer {
+    width: 100%;
+    background-color: #5E4485;
+    padding: 3%;
+    color: #FFF;
+}
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    color: #FFF;
+}
+.fa:hover {
+    color: #D5D5D5;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
