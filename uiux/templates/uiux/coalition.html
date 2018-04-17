@@ -40,7 +40,8 @@ body {
 
 
 .grey-container {
-    background-color: grey;
+    background-color: #F9F9F9;  
+    padding: 20px 0;
 }
 
 .grey-container div {
@@ -48,10 +49,15 @@ body {
 }
 
 
-
+.grey-left span {
+    font-size: 40px;
+    font-weight: bold;
+}
 
 .grey-right {
     float: right;
+    padding: 15px 0;
+
 }
 
 .main-navigation, .sub1, .sub2 {
@@ -67,13 +73,14 @@ body {
 .main-navigation a {
     text-decoration: none;
     display: block;
-    width: 100px;
-    height: 50px;
-    background-color: pink;
+    width: 100%;
+    color: black;
+    font-size: 15px;
+    background-color: ; <!--pink-->
 
 }
 .main-navigation .sub1 li, .main-navigation > li {
-    border: 1px solid green;
+    <!--border: 1px solid green;-->
 
 }
 .main-navigation .sub1 a {
@@ -84,18 +91,40 @@ body {
     margin-left: px;
 }
 .main-navigation li:hover > a {
-    background-color: blue;
-}
-.main-navigation li:hover a:hover {
-    background-color: yellow;
+    background-color: ;
+    font-weight: bold;
+
 }
 
-.main-navigation .sub1 {
+.main-navigation > li:hover > a {
+    border-bottom: 5px solid #ED6A12; <!--orange-->
+
+}
+.main-navigation li:hover a:hover {
+    background-color: ;
+
+
+}
+
+.main-navigation .sub1:nth-of-type(1) {
     display: none;
     position: absolute;
-    padding: 0;
+    padding: 40px 0 0 0;
     margin: 0;
     top: 0px;
+}
+.sub1 a{
+    background-color: white;
+    border-left: solid 1px black;
+    border-right: solid 1px black;
+}
+.sub1 li:first-of-type {
+    background-color: ;
+    border-top: solid 1px black;
+}
+.sub1 li:last-of-type {
+    background-color: ;
+    border-bottom: solid 1px black;
 }
 .main-navigation .sub2, .main-navigation .sub3 {
     display: none;
@@ -164,45 +193,45 @@ body {
             </div>
             <div class="grey-right">
 
-<ul class="main-navigation">
-    <li><a href="#">Title 1</a></li>
-    <li><a href="#">Title 2</a>
-        <ul class="sub1">
-            <li><a href="#">Submenu 1</a></li>
-            <li><a href="#">Submenu 2</a></li>
-            <li><a href="#">Submenu 3</a>
-                <ul class="sub2">
-                    <li><a href="#">ssSubmenu 1</a></li>
-                    <li><a href="#">ssSubmenu 2</a></li>
-                    <li><a href="#">ssSubmenu 3</a></li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-    <li><a href="#">Title 3</a></li>
-    <li><a href="#">Title 4</a></li>
-    <li><a href="#">Title 5</a></li>
-    <li><a href="#">Title 6</a></li>
-    <li><a href="#">Title 7</a>
-        <ul class="sub1">
-            <li><a href="#">Submenu 71</a></li>
-            <li><a href="#">Submenu 72</a></li>
-            <li><a href="#">Submenu 73</a>
-                <ul class="sub2">
-                    <li><a href="#">ssSubmenu 71</a></li>
-                    <li><a href="#">ssSubmenu 72</a></li>
-                    <li><a href="#">ssSubmenu 73</a>
-                            <ul class="sub3">
-                            <li><a href="#">ssSubmenu 1</a></li>
-                            <li><a href="#">ssSubmenu 2</a></li>
-                            <li><a href="#">ssSubmenu 3</a></li>
+                <ul class="main-navigation">
+                    <li><a href="#">Title 1</a></li>
+                    <li><a href="#">Title 2</a>
+                        <ul class="sub1">
+                            <li><a href="#">Submenu 1</a></li>
+                            <li><a href="#">Submenu 2</a></li>
+                            <li><a href="#">Submenu 3</a>
+                                <ul class="sub2">
+                                    <li><a href="#">ssSubmenu 1</a></li>
+                                    <li><a href="#">ssSubmenu 2</a></li>
+                                    <li><a href="#">ssSubmenu 3</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
+                    <li><a href="#">Title 3</a></li>
+                    <li><a href="#">Title 4</a></li>
+                    <li><a href="#">Title 5</a></li>
+                    <li><a href="#">Title 6</a></li>
+                    <li><a href="#">Title 7</a>
+                        <!--<ul class="sub1">-->
+                            <!--<li><a href="#">Submenu 71</a></li>-->
+                            <!--<li><a href="#">Submenu 72</a></li>-->
+                            <!--<li><a href="#">Submenu 73</a>-->
+                                <!--<ul class="sub2">-->
+                                    <!--<li><a href="#">ssSubmenu 71</a></li>-->
+                                    <!--<li><a href="#">ssSubmenu 72</a></li>-->
+                                    <!--<li><a href="#">ssSubmenu 73</a>-->
+                                            <!--<ul class="sub3">-->
+                                            <!--<li><a href="#">ssSubmenu 1</a></li>-->
+                                            <!--<li><a href="#">ssSubmenu 2</a></li>-->
+                                            <!--<li><a href="#">ssSubmenu 3</a></li>-->
+                                        <!--</ul>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                    </li>
                 </ul>
-            </li>
-        </ul>
-    </li>
-</ul>
 
             </div>
         </div>
