@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>new</title>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* {
+    border: red solid 1px;
+}*/
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.orange-container div {
+    display: inline-block;
+}
+.orange-right {
+    float: right;
+}
+.container {
+    width: 100%;
+}
+.orange-container {
+    background-color: #FE6102;
+    padding: 15px;
+}
+.orange-container div span{
+    font-size: 15px;
+    font-weight: bold;
+}
+.orange-container div div span:nth-of-type(1) {
+    color: #CB3400;
+}
+.orange-container div div span:nth-of-type(2) {
+    color: #FFEEDE;
+}
+
+
+.grey-container {
+    background-color: grey;
+}
+
+.grey-container div {
+    display: inline-block;
+}
+
+
+
+
+.grey-right {
+    float: right;
+}
+
+.main-navigation, .sub1, .sub2 {
+    list-style: none;
+
+}
+.main-navigation li {
+    width: 100px;
+    float: left;
+    position: relative;
+    text-align: center;
+}
+.main-navigation a {
+    text-decoration: none;
+    display: block;
+    width: 100px;
+    height: 50px;
+    background-color: pink;
+
+}
+.main-navigation .sub1 li, .main-navigation > li {
+    border: 1px solid green;
+
+}
+.main-navigation .sub1 a {
+    margin-top: 0px;
+
+}
+.main-navigation .sub2 a {
+    margin-left: px;
+}
+.main-navigation li:hover > a {
+    background-color: blue;
+}
+.main-navigation li:hover a:hover {
+    background-color: yellow;
+}
+
+.main-navigation .sub1 {
+    display: none;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    top: 0px;
+}
+.main-navigation .sub2, .main-navigation .sub3 {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 100px;
+    padding: 0;
+    margin: 0;
+}
+
+.main-navigation li:hover .sub1 {
+    display: block;
+}
+.main-navigation .sub1 li:hover .sub2 {
+    display: block;
+}
+.main-navigation .sub1 li:hover .sub2 li:hover .sub3 {
+    display: block;
+}
+</style>
+</head>
+<body>
+
+
+  <!--<li><a href="#">Title </a>-->
+    <!--<ul>-->
+      <!--<li><a href="#">HTML</a></li>-->
+      <!--<li><a href="#">CSS</a>-->
+        <!--<ul>-->
+          <!--<li><a href="#">Resets</a></li>-->
+          <!--<li><a href="#">Grids</a></li>-->
+          <!--<li><a href="#">Frameworks</a></li>-->
+        <!--</ul>-->
+      <!--</li>-->
+      <!--<li><a href="#">JavaScript</a>-->
+        <!--<ul>-->
+          <!--<li><a href="#">Ajax</a></li>-->
+          <!--<li><a href="#">jQuery</a></li>-->
+        <!--</ul>-->
+      <!--</li>-->
+    <!--</ul>-->
+  <!--</li>-->
+    <!--<li><a href="#">Submenu 1</a></li>-->
+    <!--<li><a href="#">Submenu 2</a></li>-->
+    <!--<li><a href="#">Submenu 3</a></li>-->
+
+
+
+    <div class="orange-container">
+        <div class="container">
+            <div class="orange-left">
+                <span>CALL US NOW!</span>
+                <span>385.154.11.28.35</span>
+            </div>
+            <div class="orange-right">
+                <span>LOGIN</span>
+                <span>SIGNUP</span>
+            </div>
+        </div>
+    </div>
+    <div class="grey-container">
+        <div class="container">
+            <div class="grey-left">
+                <span>YOUR</span>
+                <span>LOGO</span>
+            </div>
+            <div class="grey-right">
+
+<ul class="main-navigation">
+    <li><a href="#">Title 1</a></li>
+    <li><a href="#">Title 2</a>
+        <ul class="sub1">
+            <li><a href="#">Submenu 1</a></li>
+            <li><a href="#">Submenu 2</a></li>
+            <li><a href="#">Submenu 3</a>
+                <ul class="sub2">
+                    <li><a href="#">ssSubmenu 1</a></li>
+                    <li><a href="#">ssSubmenu 2</a></li>
+                    <li><a href="#">ssSubmenu 3</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li><a href="#">Title 3</a></li>
+    <li><a href="#">Title 4</a></li>
+    <li><a href="#">Title 5</a></li>
+    <li><a href="#">Title 6</a></li>
+    <li><a href="#">Title 7</a>
+        <ul class="sub1">
+            <li><a href="#">Submenu 71</a></li>
+            <li><a href="#">Submenu 72</a></li>
+            <li><a href="#">Submenu 73</a>
+                <ul class="sub2">
+                    <li><a href="#">ssSubmenu 71</a></li>
+                    <li><a href="#">ssSubmenu 72</a></li>
+                    <li><a href="#">ssSubmenu 73</a>
+                            <ul class="sub3">
+                            <li><a href="#">ssSubmenu 1</a></li>
+                            <li><a href="#">ssSubmenu 2</a></li>
+                            <li><a href="#">ssSubmenu 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+</body>
+</html>

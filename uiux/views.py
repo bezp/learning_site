@@ -5,8 +5,10 @@ from . import models
 
 
 # Create your views here.
+# def trial(request):
+#     return render(request, 'uiux/trial.html')
+
+
+
 def trial(request):
-    return render(request, 'uiux/trial.html')
-
-
-
+    return render(request, 'uiux/coalition.html')
